@@ -51,9 +51,9 @@ const NAV = [
 
 const STATS = [
   { value: "7+", label: "Years experience" },
-  { value: "20+", label: "Apps shipped" },
+  { value: "40+", label: "Apps shipped" },
   { value: "4", label: "Companies" },
-  { value: "2", label: "App stores" },
+  { value: "30+", label: "Published apps" },
 ];
 
 const SKILLS = [
