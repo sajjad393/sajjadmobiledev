@@ -51,9 +51,9 @@ const NAV = [
 
 const STATS = [
   { value: "7+", label: "Years experience" },
-  { value: "20+", label: "Apps shipped" },
+  { value: "40+", label: "Apps shipped" },
   { value: "4", label: "Companies" },
-  { value: "2", label: "App stores" },
+  { value: "30+", label: "Published apps" },
 ];
 
 const SKILLS = [
@@ -144,11 +144,39 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    name: "BitInt Crypto Exchange",
+    kind: "Crypto trading app",
+    body: "Most recent crypto exchange built in Flutter with spot trading, secure wallets, KYC flows and real-time market data.",
+    tags: ["Flutter", "Crypto", "WebSockets", "KYC"],
+    link: null,
+  },
+  {
     name: "BNQ Global Exchange",
     kind: "Crypto trading app",
     body: "Spot, futures, P2P trading and staking with live WebSocket market data, secure wallets and blockchain transactions.",
     tags: ["Flutter", "WebSockets", "Blockchain", "Wallets"],
     link: "https://www.bnqglobal.com/",
+  },
+  {
+    name: "GPTGuru",
+    kind: "AI assistant app",
+    body: "AI-powered productivity assistant with chat, content generation and smart tooling built for mobile.",
+    tags: ["Flutter", "AI", "Chat", "APIs"],
+    link: "https://gptguru.io/",
+  },
+  {
+    name: "Moverse",
+    kind: "Web3 metaverse platform",
+    body: "Move-to-earn metaverse experience connecting fitness activity with digital assets and rewards.",
+    tags: ["Flutter", "Web3", "Fitness", "Rewards"],
+    link: "https://moverse.run/",
+  },
+  {
+    name: "Moverse Fit",
+    kind: "Fitness + Web3 app",
+    body: "Companion fitness app tracking workouts and syncing activity with the Moverse token ecosystem.",
+    tags: ["Flutter", "Fitness", "Web3", "Health"],
+    link: null,
   },
   {
     name: "NFT Marketplace App",
