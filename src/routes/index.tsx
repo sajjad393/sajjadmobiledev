@@ -577,12 +577,22 @@ function Portfolio() {
               href="https://www.linkedin.com/in/sajjad-a/"
             />
           </div>
-          <a
-            href="mailto:sajjadahmed393@gmail.com"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
-          >
-            Start a conversation <ArrowRight className="size-4" />
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="mailto:sajjadahmed393@gmail.com"
+              className="glow-ring inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+            >
+              Start a conversation <ArrowRight className="size-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sajjad-a/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              <Linkedin className="size-4" /> Connect on LinkedIn
+            </a>
+          </div>
         </div>
       </Section>
 
