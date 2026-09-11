@@ -61,4 +61,31 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
+        uses: actions/deploy-pages@v4            echo "value=/$REPO/" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build static site
+        env:
+          PAGES_BASE: ${{ steps.base.outputs.value }}
+        run: bun run build
+
+      - name: Prepare static output
+        run: |
+          touch dist/client/.nojekyll
+          cp dist/client/index.html dist/client/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/client
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
         uses: actions/deploy-pages@v4
