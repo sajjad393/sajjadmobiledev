@@ -20,20 +20,56 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sajjad Ahmed — Senior Flutter & Mobile App Developer" },
+      { title: "Sajjad Ahmed — Senior Flutter & Mobile App Developer | Open to Work" },
       {
         name: "description",
         content:
-          "Senior Flutter developer with 7+ years building cross-platform mobile apps for iOS and Android — crypto trading, blockchain, real-time and AI-powered products.",
+          "Senior Flutter developer with 7+ years building high-retention cross-platform mobile apps for iOS and Android. Available for full-time, remote and freelance Flutter developer roles.",
       },
-      { property: "og:title", content: "Sajjad Ahmed — Senior Flutter & Mobile App Developer" },
+      {
+        property: "og:title",
+        content: "Sajjad Ahmed — Senior Flutter & Mobile App Developer | Open to Work",
+      },
       {
         property: "og:description",
         content:
-          "7+ years crafting fast, scalable Flutter, iOS and Android apps. Available for freelance and full-time roles.",
+          "7+ years crafting fast, scalable Flutter, iOS and Android apps. Seeking senior mobile engineer and Flutter developer opportunities.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://sajjadmobiledev.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "Flutter developer, mobile app developer, iOS developer, Android developer, senior Flutter developer, remote Flutter jobs, cross-platform apps" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [{ rel: "canonical", href: "https://sajjadmobiledev.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Sajjad Ahmed",
+          jobTitle: "Senior Flutter & Mobile App Developer",
+          url: "https://sajjadmobiledev.lovable.app/",
+          sameAs: ["https://www.linkedin.com/in/sajjad-a/"],
+          knowsAbout: [
+            "Flutter",
+            "Dart",
+            "iOS",
+            "Android",
+            "Swift",
+            "Kotlin",
+            "Firebase",
+            "Blockchain",
+            "Mobile App Development",
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Islamabad",
+            addressCountry: "PK",
+          },
+        }),
+      },
     ],
   }),
   component: Portfolio,
@@ -231,7 +267,7 @@ function Portfolio() {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#home" className="font-display text-lg font-bold tracking-tight">
-            sajjad<span className="text-gradient">.dev</span>
+            Sajjad <span className="text-gradient">Ahmed</span>
           </a>
 
           <nav className="hidden items-center gap-7 md:flex">
@@ -300,23 +336,26 @@ function Portfolio() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              I'm Sajjad Ahmed — 7+ years turning ideas into fast, scalable apps for iOS and
-              Android. Crypto trading platforms, blockchain wallets, real-time systems and
-              AI-powered products, shipped end to end.
+              I'm Sajjad Ahmed — a senior Flutter developer with 7+ years turning ideas into
+              fast, scalable apps for iOS and Android. I specialise in crypto trading platforms,
+              blockchain wallets, real-time systems and AI-powered products, shipped end to end.
+              Currently open to full-time, remote and freelance mobile engineering roles.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#projects"
+                href="#contact"
                 className="glow-ring inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
               >
-                View my work <ArrowRight className="size-4" />
+                Hire me <ArrowRight className="size-4" />
               </a>
               <a
-                href="#contact"
+                href="https://www.linkedin.com/in/sajjad-a/"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
               >
-                Get in touch
+                <Linkedin className="size-4" /> Connect on LinkedIn
               </a>
             </div>
 
