@@ -327,7 +327,7 @@ function Portfolio() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-1.5 text-xs font-medium text-muted-foreground">
               <span className="size-2 rounded-full bg-primary" />
-              Available for freelance & full-time
+              Available for part-time & full-time
             </span>
 
             <h1 className="mt-6 font-display text-4xl leading-[1.05] font-extrabold sm:text-5xl md:text-6xl">
