@@ -374,7 +374,7 @@ function Portfolio() {
           <div className="relative mx-auto w-full max-w-sm">
             <div className="animate-float glass-card glow-ring relative overflow-hidden rounded-4xl p-3">
               <img
-                src="/images/sajjad.jpg"
+                src={`${import.meta.env.BASE_URL}images/sajjad.jpg`}
                 alt="Portrait of Sajjad Ahmed, senior Flutter developer"
                 className="aspect-square w-full rounded-3xl object-cover"
               />
