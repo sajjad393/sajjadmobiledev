@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -20,35 +20,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: '20'
-          cache: 'npm'
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
-      - name: Build with base path
-        env:
-          PAGES_BASE: /sajjadmobiledev/
-        run: npm run build
-
-      - name: Prepare static output
+      - name: Compute Pages base path
+        id: base
         run: |
-          touch dist/client/.nojekyll
-          cp dist/client/index.html dist/client/404.html
-
-      - name: Deploy to gh-pages branch
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git checkout --orphan gh-pages
-          git rm -rf .
-          cp -r dist/client/* .
-          touch .nojekyll
-          git add -A
-          git commit -m "Deploy to GitHub Pages" || echo "No changes"
-          git push origin gh-pages --force            echo "value=/$REPO/" >> "$GITHUB_OUTPUT"
+          REPO="${{ github.event.repository.name }}"
+          if [[ "$REPO" == *.github.io ]]; then
+            echo "value=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=/$REPO/" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Build static site
